@@ -1,3 +1,6 @@
+% SNE - Numerical Simulation in Engineering (MCA - University of Minho (Braga))
+% Authors-> Diogo Silva and Tomás Pereira 
+
 % Solving Boundary Value Problem (BVP)
 % The equation to solve is defined here
 
