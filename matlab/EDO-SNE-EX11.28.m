@@ -48,22 +48,18 @@ function solve_heat()
     ylabel('Temperature (K)')
     title('Temperature Distribution Along the Wire')
 
-    % Print max temperature
     maxTemp = max(y(1,:));
     fprintf('Maximum temperature along the wire: %.2f K\n', maxTemp);
     
-    % Nested function defining the ODE system
     function dxdy = bvsolve(x, y)
         dxdy = [y(2); C1*(y(1) - Tamb) + C2*(y(1)^4 - Tamb^4) - C3];
     end
 
-    % Nested function defining boundary conditions
     function res = bvbound(ya, yb)
         res = [ya(1) - Tamb; yb(2)];  % Dirichlet at left, Neumann at right
     end
 
 end
 
-% Run the solver
 solve_heat();
 
